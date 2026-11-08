@@ -172,7 +172,7 @@ bool OpenPreviewProbe(HINSTANCE module, HWND owner, bool quitOnClose) {
     AppendMenuW(submenu,MF_STRING,FocusContent,L"&Prejsť do obsahu");
     AppendMenuW(submenu,MF_STRING,CloseCommand,L"&Zavrieť a vrátiť sa\tAlt+F4");
     AppendMenuW(menu,MF_POPUP,reinterpret_cast<UINT_PTR>(submenu),L"&Náhľad");
-    HWND hwnd=CreateWindowExW(0,ClassName,L"Skúška náhľadu 0.0.3 — Accessible Preview",WS_OVERLAPPEDWINDOW,
+    HWND hwnd=CreateWindowExW(0,ClassName,L"Skúška náhľadu — npp-html-markdown-preview",WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT,CW_USEDEFAULT,1000,750,owner,menu,module,state.get());
     if(!hwnd) { DestroyMenu(menu); windows.erase(std::remove(windows.begin(),windows.end(),state),windows.end()); return false; }
     ShowWindow(hwnd,SW_SHOW); Start(state); return true;

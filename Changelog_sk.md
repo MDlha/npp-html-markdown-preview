@@ -2,6 +2,8 @@
 
 ## 0.8 — 2026-11-07
 
+- Premenovaný doplnok, inštalačný priečinok a DLL na npp-html-markdown-preview.
+
 - **Alt+Shift+P** otvorí alebo obnoví náhľad HTML aj Markdownu. Pri známom formáte doplnok rozhodne automaticky. Pri nerozpoznanom formáte ponúkne klávesovú voľbu.
 - Upravený presun fokusu pri veľkých náhľadoch, pri ktorých NVDA mohol zamrznúť.
 - Pri prvom zablokovanom stiahnutí v aktívnom náhľade sa zobrazí vysvetlenie.

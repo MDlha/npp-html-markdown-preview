@@ -1,6 +1,6 @@
-# Accessible Preview 0.8 for Notepad++
+# npp-html-markdown-preview 0.8
 
-**Test build.** Accessible Preview opens HTML or Markdown from the active Notepad++ tab in a separate, maximized window. The preview includes unsaved changes. The project author designed the features, controls, and accessibility.
+**Test build for Notepad++.** The npp-html-markdown-preview plugin renders previews of files written primarily in the HTML and Markdown markup languages in a simple, accessible way. The preview opens from the active tab in a separate, maximized window and includes unsaved changes. The project author designed the features, controls, and accessibility.
 
 ### Requirements
 
@@ -10,13 +10,13 @@
 
 ### Installation or update
 
-1. Close all Notepad++ windows. If you received a ZIP file, extract it.
-2. In File Explorer, select **AccessiblePreview.dll** from the release and press **Ctrl+C**.
+1. Close all Notepad++ windows. If you are upgrading from Accessible Preview, move the old `plugins\AccessiblePreview` subfolder outside `plugins` before installing. If you received a ZIP file, extract it.
+2. In File Explorer, select **npp-html-markdown-preview.dll** from the release and press **Ctrl+C**.
 3. Press **Alt+D**, enter the path to the `plugins` folder, and press **Enter**. A standard installation uses `C:\Program Files\Notepad++\plugins`. A portable installation has its `plugins` folder next to `notepad++.exe`.
-4. Open the **AccessiblePreview** subfolder. If it is missing, press **Ctrl+Shift+N**, enter the name, press **Enter**, and open the folder. Press **Ctrl+V** to paste the DLL. When updating, confirm replacement of the previous DLL. Windows may ask for administrator permission to copy files into Program Files.
-5. Start Notepad++ as usual. **Accessible Preview 0.8** appears in the **Plugins** menu.
+4. Open the **npp-html-markdown-preview** subfolder. If it is missing, press **Ctrl+Shift+N**, enter the name, press **Enter**, and open the folder. Press **Ctrl+V** to paste the DLL. When updating an installation with the same name, confirm replacement of the previous DLL. Windows may ask for administrator permission to copy files into Program Files.
+5. Start Notepad++ as usual. **npp-html-markdown-preview** appears in the **Plugins** menu.
 
-The standard installation path is `C:\Program Files\Notepad++\plugins\AccessiblePreview\AccessiblePreview.dll`. Keep the DLL and subfolder names as shown. The release includes a checksum in `SHA256SUMS.txt`.
+The standard installation path is `C:\Program Files\Notepad++\plugins\npp-html-markdown-preview\npp-html-markdown-preview.dll`. Keep the DLL and subfolder names as shown. The release includes a checksum in `SHA256SUMS.txt`.
 
 ### Controls
 
@@ -42,4 +42,4 @@ If you edit the source, refresh the preview before jumping. Repeated or dynamica
 
 ### Uninstallation
 
-Close Notepad++ and remove the `plugins\AccessiblePreview` folder. Keep WebView2 available for other apps.
+Close Notepad++ and remove the `plugins\npp-html-markdown-preview` folder. Keep WebView2 available for other apps.

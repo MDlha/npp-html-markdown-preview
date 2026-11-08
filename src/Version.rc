@@ -24,11 +24,11 @@ BEGIN
  BEGIN
   BLOCK "040904B0"
   BEGIN
-   VALUE "FileDescription", "Accessible Preview for Notepad++ (development build)"
+   VALUE "FileDescription", "The npp-html-markdown-preview plugin renders previews of files written primarily in the HTML and Markdown markup languages in a simple, accessible way."
    VALUE "FileVersion", "0.8"
-   VALUE "ProductName", "Accessible Preview"
+   VALUE "ProductName", "npp-html-markdown-preview"
    VALUE "ProductVersion", "0.8"
-   VALUE "OriginalFilename", "AccessiblePreview.dll"
+   VALUE "OriginalFilename", "npp-html-markdown-preview.dll"
   END
  END
  BLOCK "VarFileInfo"

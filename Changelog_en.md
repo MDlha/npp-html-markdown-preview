@@ -2,6 +2,8 @@
 
 ## 0.8 — 2026-11-07
 
+- Renamed the plugin, installation folder, and DLL to npp-html-markdown-preview.
+
 - **Alt+Shift+P** opens or refreshes HTML and Markdown previews. The plugin detects known formats automatically and offers a keyboard-accessible choice when it cannot determine the format.
 - Adjusted focus handling for large previews that could cause NVDA to freeze.
 - The first blocked download in the active preview shows an explanation.

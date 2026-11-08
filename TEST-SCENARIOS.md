@@ -1,4 +1,4 @@
-# Prehľad skúšok / Test scenarios
+# npp-html-markdown-preview – prehľad skúšok / test scenarios
 
 [Slovenčina](#slovenčina) · [English](#english)
 
@@ -11,7 +11,7 @@ Prehľad zahŕňa skúšobné zostavy pre Windows a Notepad++ x64. Pri každom s
 - **0.6 a 0.6.1 – vykreslenie HTML a Markdownu.** Oba formáty sa načítali v samostatnom skúšobnom náhľade. V 0.6.1 sa potvrdilo aj maximalizované okno.
 - **0.7.1 – viac otvorených náhľadov.** Autorka v Notepad++ s NVDA pracovala s tromi náhľadmi naraz. Notepad++ pri tejto skúške nezamrzol a po jeho ukončení sa všetky náhľady zatvorili. Skúšané odkazy v HTML sa otvorili.
 - **0.8 – otvorenie a voľba formátu.** Autorka potvrdila skratku **Alt+Shift+P** a prístupný dialóg pri súbore `.txt` vrátane tlačidiel a klávesových skratiek. Rozsiahly HTML dokument vykreslil formuláre, odkazy a rozbaľovacie prvky. Pri skúške ukladania sa súbor nestiahol, čo zodpovedá zámernému blokovaniu sťahovania v náhľade.
-- **0.8 – automatické skúšky.** Prešlo 7 zo 7 skúšok zostavy vrátane načítania DLL, rozpoznania prípon, prevodu Markdownu a mapovania na riadok. Skúšky s čítačom obrazovky sa evidujú osobitne.
+- **0.8 – automatické skúšky.** Prešlo 7 zo 7 skúšok zostavy vrátane načítania DLL, rozpoznania prípon, prevodu Markdownu a mapovania na riadok. Skúška načítania DLL overila aj nový názov doplnku. Výmena predošlej inštalácie a obsluha tejto zostavy s NVDA v Notepad++ čakajú na ručné overenie.
 
 ### Čo zlyhalo a ako to dopadlo po úprave
 
@@ -33,7 +33,7 @@ This summary covers test builds for Windows and Notepad++ x64. Each scenario des
 - **0.6 and 0.6.1 – HTML and Markdown rendering.** Both formats loaded in the standalone test viewer. Version 0.6.1 also confirmed that the window opened maximized.
 - **0.7.1 – multiple open previews.** The project author used three previews at once in Notepad++ with NVDA. Notepad++ remained responsive during this test, and all previews closed when it exited. The HTML links she tried opened.
 - **0.8 – opening a preview and selecting a format.** The project author verified **Alt+Shift+P** and the accessible format dialog for a `.txt` file, including its buttons and keyboard shortcuts. A large HTML document rendered forms, links, and expandable elements. The save test did not download a file, consistent with the preview's download restriction.
-- **0.8 – automated tests.** All 7 build tests passed, including DLL loading, extension detection, Markdown conversion, and source line mapping. Screen reader tests are recorded separately.
+- **0.8 – automated tests.** All 7 build tests passed, including DLL loading, extension detection, Markdown conversion, and source line mapping. The DLL loading test also checked the new plugin name. Upgrading the previous installation and using this build with NVDA in Notepad++ still require manual testing.
 
 ### What failed and how the changes were retested
 

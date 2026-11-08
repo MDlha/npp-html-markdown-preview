@@ -1,6 +1,6 @@
-# Accessible Preview 0.8 pre Notepad++
+# npp-html-markdown-preview 0.8
 
-**Skúšobná zostava pre testerov.** Accessible Preview otvorí HTML alebo Markdown z aktívnej karty Notepad++ v samostatnom maximalizovanom okne. Náhľad zahŕňa aj neuložené zmeny. Funkcie, ovládanie a prístupnosť navrhla autorka projektu.
+**Skúšobná zostava pre Notepad++.** Doplnok npp-html-markdown-preview jednoduchým a prístupným spôsobom vykreslí náhľad súborov písaných primárne v značkovacích jazykoch HTML a Markdown. Náhľad sa otvorí z aktívnej karty v samostatnom maximalizovanom okne a zahŕňa aj neuložené zmeny. Funkcie, ovládanie a prístupnosť navrhla autorka projektu.
 
 ### Požiadavky
 
@@ -10,13 +10,13 @@
 
 ### Inštalácia alebo aktualizácia
 
-1. Zatvorte všetky okná Notepad++. Ak ste dostali ZIP, rozbaľte ho.
-2. V Prieskumníkovi označte **AccessiblePreview.dll** z vydania a stlačte **Ctrl+C**.
+1. Zatvorte všetky okná Notepad++. Ak prechádzate z verzie Accessible Preview, presuňte starý podpriečinok `plugins\AccessiblePreview` mimo `plugins`. Ak ste dostali ZIP, rozbaľte ho.
+2. V Prieskumníkovi označte **npp-html-markdown-preview.dll** z vydania a stlačte **Ctrl+C**.
 3. Stlačte **Alt+D**, zadajte cestu k priečinku `plugins` a stlačte **Enter**. Pri bežnej inštalácii je to `C:\Program Files\Notepad++\plugins`. Pri prenosnej verzii je `plugins` vedľa `notepad++.exe`.
-4. Otvorte podpriečinok **AccessiblePreview**. Ak chýba, vytvorte ho cez **Ctrl+Shift+N**, zadajte názov, potvrďte cez **Enter** a otvorte ho. Vložte DLL cez **Ctrl+V**. Pri aktualizácii potvrďte nahradenie pôvodnej DLL. Windows môže pri kopírovaní do Program Files vyžiadať oprávnenie správcu.
-5. Spustite Notepad++ bežným spôsobom. V ponuke **Pluginy** nájdete **Accessible Preview 0.8**.
+4. Otvorte podpriečinok **npp-html-markdown-preview**. Ak chýba, vytvorte ho cez **Ctrl+Shift+N**, zadajte názov, potvrďte cez **Enter** a otvorte ho. Vložte DLL cez **Ctrl+V**. Pri aktualizácii doplnku s tým istým názvom potvrďte nahradenie pôvodnej DLL. Windows môže pri kopírovaní do Program Files vyžiadať oprávnenie správcu.
+5. Spustite Notepad++ bežným spôsobom. V ponuke **Pluginy** nájdete **npp-html-markdown-preview**.
 
-Výsledná cesta pri bežnej inštalácii je `C:\Program Files\Notepad++\plugins\AccessiblePreview\AccessiblePreview.dll`. Zachovajte názov DLL aj podpriečinka. Kontrolný súčet je v súbore `SHA256SUMS.txt` pri vydaní.
+Výsledná cesta pri bežnej inštalácii je `C:\Program Files\Notepad++\plugins\npp-html-markdown-preview\npp-html-markdown-preview.dll`. Zachovajte názov DLL aj podpriečinka. Kontrolný súčet je v súbore `SHA256SUMS.txt` pri vydaní.
 
 ### Ovládanie
 
@@ -42,4 +42,4 @@ Po úprave zdroja pred skokom obnovte náhľad. Opakovaný alebo dynamicky vytvo
 
 ### Odinštalovanie
 
-Pri zatvorenom Notepad++ odstráňte priečinok `plugins\AccessiblePreview`. WebView2 ponechajte k dispozícii pre ostatné aplikácie.
+Pri zatvorenom Notepad++ odstráňte priečinok `plugins\npp-html-markdown-preview`. WebView2 ponechajte k dispozícii pre ostatné aplikácie.

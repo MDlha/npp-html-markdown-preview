@@ -74,7 +74,7 @@ BOOL APIENTRY DllMain(HINSTANCE instance,DWORD reason,LPVOID) {
     if(reason==DLL_PROCESS_ATTACH) {module=instance;DisableThreadLibraryCalls(instance);} return TRUE;
 }
 extern "C" __declspec(dllexport) void setInfo(NppData data) { npp=data; }
-extern "C" __declspec(dllexport) const wchar_t* getName() { return L"Accessible Preview 0.8"; }
+extern "C" __declspec(dllexport) const wchar_t* getName() { return L"npp-html-markdown-preview"; }
 extern "C" __declspec(dllexport) FuncItem* getFuncsArray(int* count) {
     if(!initialized) {
         lstrcpyW(commands[0]._itemName,L"Náhľad / obnoviť");commands[0]._pFunc=Preview;commands[0]._pShKey=&previewShortcut;
