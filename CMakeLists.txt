@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
-project(npp-html-markdown-preview VERSION 0.8 LANGUAGES C CXX RC)
+project(npp-html-markdown-preview VERSION 0.8.1 LANGUAGES C CXX RC)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/${PROJECT_VERSION}")
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 if(NOT WIN32 OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)

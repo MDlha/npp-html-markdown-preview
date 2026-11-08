@@ -34,7 +34,7 @@ std::optional<PreviewFormat> SelectFormat(const HtmlSnapshot& snapshot) {
     const auto choice = DialogBoxParamW(module, MAKEINTRESOURCEW(IDD_PREVIEW_FORMAT),
                                         npp._nppHandle, FormatDialog, 0);
     if (choice == -1) {
-        MessageBoxW(npp._nppHandle,L"Výber formátu sa nepodarilo otvoriť.",L"Náhľad 0.8",MB_OK|MB_ICONERROR);
+        MessageBoxW(npp._nppHandle,L"Výber formátu sa nepodarilo otvoriť.",L"Náhľad 0.8.1",MB_OK|MB_ICONERROR);
     }
     if (choice != IDYES && choice != IDNO) return std::nullopt;
     if (SendMessageW(npp._nppHandle, NPPM_GETCURRENTBUFFERID, 0, 0) != static_cast<LRESULT>(snapshot.buffer))
@@ -47,7 +47,7 @@ std::optional<PreviewFormat> SelectFormat(const HtmlSnapshot& snapshot) {
 void Preview() {
     if(!comInitialized) {
         HRESULT hr=CoInitializeEx(nullptr,COINIT_APARTMENTTHREADED);
-        if(FAILED(hr)) {MessageBoxW(npp._nppHandle,L"Nepodarilo sa inicializovať COM.",L"Náhľad 0.8",MB_OK|MB_ICONERROR);return;}
+        if(FAILED(hr)) {MessageBoxW(npp._nppHandle,L"Nepodarilo sa inicializovať COM.",L"Náhľad 0.8.1",MB_OK|MB_ICONERROR);return;}
         comInitialized=true;
     }
     try {
@@ -58,7 +58,7 @@ void Preview() {
         if(snapshot.markdown) snapshot.utf8=RenderMarkdown(snapshot.utf8);
         ShowHtmlSnapshot(module,npp._nppHandle,std::move(snapshot));
     } catch(...) {
-        MessageBoxW(npp._nppHandle,L"Obsah editora sa nepodarilo načítať. Limit tejto verzie je 32 MiB; dokument musí mať platné textové kódovanie.",L"Náhľad 0.8",MB_OK|MB_ICONERROR);
+        MessageBoxW(npp._nppHandle,L"Obsah editora sa nepodarilo načítať. Limit tejto verzie je 32 MiB; dokument musí mať platné textové kódovanie.",L"Náhľad 0.8.1",MB_OK|MB_ICONERROR);
     }
 }
 void Probe() {

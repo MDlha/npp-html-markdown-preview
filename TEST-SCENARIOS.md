@@ -20,6 +20,8 @@ Prehľad zahŕňa skúšobné zostavy pre Windows a Notepad++ x64. Pri každom s
 - **0.7.1 – návrat do náhľadu.** V pôvodnej zostave sa po skoku na zdroj nedalo vrátiť do náhľadu cez **Alt+Tab**. Po zmene na samostatné okná autorka potvrdila, že návrat funguje.
 - **0.8 – zamrznutie NVDA pri dlhom Markdown náhľade.** Pri opakovanej skúške zostal Notepad++ funkčný a NVDA zamrzol počas spracovania fokusu. Doplnok pri veľkých náhľadoch vynechal dodatočný presun fokusu na celé telo stránky. Autorka následne úspešne zopakovala pôvodný scenár. Presná príčina zamrznutia nebola určená.
 
+- **0.8 → 0.8.1 – skok na koniec náhľadu počas nečinnosti.** V 0.8.1 doplnok po úplnom načítaní už znova nenastavuje fokus. Autorka pri skúške s NVDA potvrdila zachovanie miesta čítania v náhľade súboru `.txd`. Prešlo aj všetkých sedem automatických skúšok zostavy.
+
 ### Čo sa ešte overuje
 
 Skok na zdroj s JAWS, ohlásenie zablokovaného stiahnutia cez NVDA a návrat fokusu po zatvorení tejto hlášky. Výsledky vyššie sa vzťahujú na opísané scenáre a zostavy.
@@ -41,6 +43,8 @@ This summary covers test builds for Windows and Notepad++ x64. Each scenario des
 - **0.7 → 0.7.1 – jumping from the reading position to source.** NVDA did not expose the caret position when reading without a selection. After the switch to selected text, the project author verified **Alt+Shift+S** with NVDA Native Selection Mode.
 - **0.7.1 – returning to the preview.** In the initial build, **Alt+Tab** could not return to the preview after a source jump. After the previews were given separate windows, the project author verified that switching back worked.
 - **0.8 – NVDA freeze with a long Markdown preview.** In the repeat test, Notepad++ remained responsive and NVDA froze while processing focus. The plugin now skips the extra step of focusing the entire page body in large previews. The project author successfully repeated the original scenario. The exact cause of the freeze was not established.
+
+- **0.8 → 0.8.1 – jump to the end of the preview after inactivity.** Version 0.8.1 no longer refocuses the preview when loading completes. The project author confirmed with NVDA that the reading position was preserved in the preview of a `.txd` file. All seven automated build tests also passed.
 
 ### Still being verified
 

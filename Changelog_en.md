@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1 — 2026-11-08
+
+- The preview moves focus into the web content when it is ready, if focus is still on the host window. It no longer refocuses the page after loading completes, avoiding an interruption while reading.
+
 ## 0.8 — 2026-11-07
 
 - Renamed the plugin, installation folder, and DLL to npp-html-markdown-preview.

@@ -1,4 +1,4 @@
-# npp-html-markdown-preview 0.8
+# npp-html-markdown-preview 0.8.1
 
 **Skúšobná zostava pre Notepad++.** Doplnok npp-html-markdown-preview jednoduchým a prístupným spôsobom vykreslí náhľad súborov písaných primárne v značkovacích jazykoch HTML a Markdown. Náhľad sa otvorí z aktívnej karty v samostatnom maximalizovanom okne a zahŕňa aj neuložené zmeny. Funkcie, ovládanie a prístupnosť navrhla autorka projektu.
 
@@ -24,7 +24,7 @@ Výsledná cesta pri bežnej inštalácii je `C:\Program Files\Notepad++\plugins
 - Prípony `.html` a `.htm` zvolia HTML. Prípony `.md` a `.markdown` zvolia Markdown. Pri nepomenovanej karte alebo neznámej prípone sa použije HTML, ak ho rozpoznal editor. Inak vyberte formát cez **Tab** a **Enter** alebo voľbu zrušte cez **Escape**. Doplnok si výber zapamätá do zatvorenia karty.
 - V náhľade použite šípky alebo rýchlu navigáciu čítača obrazovky. **Tab** a **Shift+Tab** presúvajú fokus, **Enter** aktivuje odkazy a **medzerník** tlačidlá.
 - **Alt+Tab** prepína medzi editorom a náhľadmi. **Alt+F4** zavrie aktívny náhľad.
-- Ponuka a hlášky doplnku sú v 0.8 v slovenčine.
+- Ponuka a hlášky doplnku sú v slovenčine.
 
 #### Skok na zdroj s NVDA
 

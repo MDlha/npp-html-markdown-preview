@@ -1,5 +1,9 @@
 # História zmien
 
+## 0.8.1 — 2026-11-08
+
+- Náhľad nastaví fokus pri pripravení obsahu, ak je ešte v hostiteľskom okne. Po úplnom načítaní už fokus znova nenastavuje, aby neprerušil čítanie.
+
 ## 0.8 — 2026-11-07
 
 - Premenovaný doplnok, inštalačný priečinok a DLL na npp-html-markdown-preview.

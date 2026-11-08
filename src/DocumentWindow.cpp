@@ -22,7 +22,6 @@ constexpr UINT SourceResultMessage=WM_APP+3;
 constexpr UINT DownloadBlockedMessage=WM_APP+4;
 constexpr UINT_PTR PreviewTimer=1;
 constexpr UINT PreviewTimeoutMs=30000;
-constexpr size_t MaxBodyFocusBytes=256*1024;
 struct Document {
     HWND window{};
     bool fromEditor{};
@@ -41,7 +40,7 @@ struct Document {
     ComPtr<ICoreWebView2> web;
 };
 std::vector<std::shared_ptr<Document>> documents;
-void Error(HWND window,const wchar_t* message) {MessageBoxW(window,message,L"Náhľad 0.8",MB_OK|MB_ICONERROR);}
+void Error(HWND window,const wchar_t* message) {MessageBoxW(window,message,L"Náhľad 0.8.1",MB_OK|MB_ICONERROR);}
 void Fail(const std::shared_ptr<Document>& d,const wchar_t* message) {
     if(d->closing || d->failed) return;
     d->failed=true;d->initializing=false;d->loading=false;d->navigationId.reset();++d->serial;
@@ -285,6 +284,18 @@ bool Configure(const std::shared_ptr<Document>& d) {
                 Fail(s,L"Vykresľovanie náhľadu zlyhalo alebo neodpovedá.");
             return S_OK;
         }).Get(),&token))) return false;
+    ComPtr<ICoreWebView2_2> web2;
+    if(FAILED(d->web.As(&web2)) || FAILED(web2->add_DOMContentLoaded(Callback<ICoreWebView2DOMContentLoadedEventHandler>(
+        [weak](ICoreWebView2* sender,ICoreWebView2DOMContentLoadedEventArgs* args)->HRESULT {
+            auto s=weak.lock();
+            if(!s || s->closing || s->failed || !s->window || s->snapshot.loadResult || sender!=s->web.Get()) return S_OK;
+            UINT64 id{};
+            if(!s->navigationId || FAILED(args->get_NavigationId(&id)) || id!=*s->navigationId ||
+               GetForegroundWindow()!=s->window) return S_OK;
+            // Enter the WebView only if the host still owns focus. Never refocus the page after loading.
+            if(GetFocus()==s->window) Focus(s);
+            return S_OK;
+        }).Get(),&token))) return false;
     if(FAILED(d->web->add_NavigationCompleted(Callback<ICoreWebView2NavigationCompletedEventHandler>(
         [weak](ICoreWebView2* sender,ICoreWebView2NavigationCompletedEventArgs* args)->HRESULT {
             auto s=weak.lock();if(!s || s->closing || s->failed || !s->window || sender!=s->web.Get()) return S_OK;
@@ -300,12 +311,6 @@ bool Configure(const std::shared_ptr<Document>& d) {
                 Fail(s,L"Dokument sa nepodarilo načítať.");
             } else {
                 s->controller->put_IsVisible(TRUE);
-                if(GetForegroundWindow()==s->window) {
-                    Focus(s);
-                    // Focusing the entire body of a large page can give a screen reader a very large text range.
-                    if(s->snapshot.utf8.size()<=MaxBodyFocusBytes)
-                        s->web->ExecuteScript(L"if(document.body){document.body.setAttribute('tabindex','-1');document.body.focus();}",nullptr);
-                }
             }return S_OK;
         }).Get(),&token))) return false;
     Resize(d);return SUCCEEDED(d->controller->put_IsVisible(TRUE));
@@ -406,7 +411,7 @@ bool ShowHtmlSnapshot(HINSTANCE module,HWND owner,HtmlSnapshot snapshot) {
             Error(d->window,L"Náhľad sa ešte načítava. Skúste skratku po dokončení znova.");return false;
         }
         d->snapshot=std::move(snapshot);
-        auto title=std::wstring(d->snapshot.markdown?L"Markdown náhľad 0.8 — ":L"HTML náhľad 0.8 — ")+d->snapshot.title;SetWindowTextW(d->window,title.c_str());
+        auto title=std::wstring(d->snapshot.markdown?L"Markdown náhľad 0.8.1 — ":L"HTML náhľad 0.8.1 — ")+d->snapshot.title;SetWindowTextW(d->window,title.c_str());
         ShowWindow(d->window,SW_SHOWMAXIMIZED);SetForegroundWindow(d->window);
         if(d->failed || !d->web) Start(d);else {Render(d);Focus(d);}
         return true;
@@ -424,7 +429,7 @@ bool ShowHtmlSnapshot(HINSTANCE module,HWND owner,HtmlSnapshot snapshot) {
     AppendMenuW(sub,MF_STRING,FocusCommand,L"&Prejsť do obsahu");
     AppendMenuW(sub,MF_STRING,ReturnCommand,L"&Zavrieť a vrátiť sa do editora\tAlt+F4");
     AppendMenuW(menu,MF_POPUP,reinterpret_cast<UINT_PTR>(sub),L"&Náhľad");
-    auto title=std::wstring(d->snapshot.markdown?L"Markdown náhľad 0.8 — ":L"HTML náhľad 0.8 — ")+d->snapshot.title;
+    auto title=std::wstring(d->snapshot.markdown?L"Markdown náhľad 0.8.1 — ":L"HTML náhľad 0.8.1 — ")+d->snapshot.title;
     // An owned window can share the editor's Alt+Tab entry and follows its window state.
     // The plugin already closes previews when the source tab or editor closes.
     d->window=CreateWindowExW(WS_EX_APPWINDOW,ClassName,title.c_str(),WS_OVERLAPPEDWINDOW,

@@ -1,4 +1,4 @@
-# npp-html-markdown-preview 0.8
+# npp-html-markdown-preview 0.8.1
 
 **Test build for Notepad++.** The npp-html-markdown-preview plugin renders previews of files written primarily in the HTML and Markdown markup languages in a simple, accessible way. The preview opens from the active tab in a separate, maximized window and includes unsaved changes. The project author designed the features, controls, and accessibility.
 
@@ -24,7 +24,7 @@ The standard installation path is `C:\Program Files\Notepad++\plugins\npp-html-m
 - The `.html` and `.htm` extensions select HTML. The `.md` and `.markdown` extensions select Markdown. For an unnamed tab or an unknown extension, the plugin uses HTML if the editor recognizes it. Otherwise, select a format with **Tab** and **Enter**, or cancel with **Escape**. The plugin remembers the choice until you close the tab.
 - In the preview, use the arrow keys or your screen reader's quick navigation commands. **Tab** and **Shift+Tab** move focus, **Enter** activates links, and **Space** activates buttons.
 - **Alt+Tab** switches between the editor and previews. **Alt+F4** closes the active preview.
-- The plugin's menu and messages are in Slovak in version 0.8.
+- The plugin's menu and messages are in Slovak.
 
 #### Jump to source with NVDA
 
