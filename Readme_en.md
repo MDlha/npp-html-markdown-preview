@@ -47,3 +47,5 @@ Close Notepad++ and remove the `plugins\npp-html-markdown-preview` folder. Keep 
 ### License and source code
 
 The project's own source code is available under the **GNU GPL version 3 or later**. See [LICENSE](LICENSE) for the terms. Dependencies are governed by their own licenses. See [BUILDING.md](BUILDING.md) for dependency versions and build instructions.
+
+[Source availability and licenses for components used in version 0.8.1](THIRD_PARTY_NOTICES.md#english).

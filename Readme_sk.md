@@ -47,3 +47,5 @@ Pri zatvorenom Notepad++ odstráňte priečinok `plugins\npp-html-markdown-previ
 ### Licencia a zdrojový kód
 
 Vlastný zdrojový kód projektu je dostupný pod licenciou **GNU GPL verzie 3 alebo novšej**. Podmienky sú v súbore [LICENSE](LICENSE). Závislosti sa riadia vlastnými licenciami. Verzie zdrojov a pokyny na zostavenie sú v súbore [BUILDING.md](BUILDING.md).
+
+[Dostupnosť zdrojov a licencie jednotlivých súčastí zostavy 0.8.1](THIRD_PARTY_NOTICES.md#slovenčina).
