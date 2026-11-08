@@ -43,3 +43,7 @@ If you edit the source, refresh the preview before jumping. Repeated or dynamica
 ### Uninstallation
 
 Close Notepad++ and remove the `plugins\npp-html-markdown-preview` folder. Keep WebView2 available for other apps.
+
+### License and source code
+
+The project's own source code is available under the **GNU GPL version 3 or later**. See [LICENSE](LICENSE) for the terms. Dependencies are governed by their own licenses. See [BUILDING.md](BUILDING.md) for dependency versions and build instructions.

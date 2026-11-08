@@ -43,3 +43,7 @@ Po úprave zdroja pred skokom obnovte náhľad. Opakovaný alebo dynamicky vytvo
 ### Odinštalovanie
 
 Pri zatvorenom Notepad++ odstráňte priečinok `plugins\npp-html-markdown-preview`. WebView2 ponechajte k dispozícii pre ostatné aplikácie.
+
+### Licencia a zdrojový kód
+
+Vlastný zdrojový kód projektu je dostupný pod licenciou **GNU GPL verzie 3 alebo novšej**. Podmienky sú v súbore [LICENSE](LICENSE). Závislosti sa riadia vlastnými licenciami. Verzie zdrojov a pokyny na zostavenie sú v súbore [BUILDING.md](BUILDING.md).
